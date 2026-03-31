@@ -25,8 +25,8 @@ const plans = [
   {
     name: "Builder",
     subtitle: "Am beliebtesten",
-    monthlyPrice: 39,
-    yearlyPrice: 390,
+    monthlyPrice: 29,
+    yearlyPrice: 290,
     features: [
       "10 Projekte",
       "Unbegrenzte AI-Anfragen",
@@ -41,8 +41,8 @@ const plans = [
   {
     name: "Strategist",
     subtitle: "Für ambitionierte Unternehmer",
-    monthlyPrice: 149,
-    yearlyPrice: 1490,
+    monthlyPrice: 99,
+    yearlyPrice: 990,
     features: [
       "Unbegrenzte Projekte",
       "Alles aus Builder",
@@ -128,7 +128,7 @@ export function Pricing() {
                 <div className="mb-8">
                   <div className="flex items-baseline gap-1">
                     <span className="font-heading text-4xl font-bold text-[var(--text-primary)]">
-                      ${yearly ? Math.round(plan.yearlyPrice / 12) : plan.monthlyPrice}
+                      {yearly ? Math.round(plan.yearlyPrice / 12) : plan.monthlyPrice}&euro;
                     </span>
                     {plan.monthlyPrice > 0 && (
                       <span className="font-body text-sm text-[var(--text-muted)]">/Monat</span>
@@ -136,7 +136,7 @@ export function Pricing() {
                   </div>
                   {yearly && plan.yearlyPrice > 0 && (
                     <p className="font-body text-xs text-[var(--text-muted)] mt-1">
-                      ${plan.yearlyPrice}/Jahr abgerechnet
+                      {plan.yearlyPrice}&euro;/Jahr abgerechnet
                     </p>
                   )}
                 </div>

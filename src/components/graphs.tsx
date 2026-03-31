@@ -369,66 +369,49 @@ export function FrameworkRadar() {
 }
 
 /**
- * Before/After bar comparison
+ * Before/After metric cards
  */
 export function BeforeAfterBars() {
   const metrics = [
-    { label: "Conversion Rate", before: 1.2, after: 4.8, unit: "%" },
-    { label: "Time to Launch", before: 8, after: 2, unit: " Wochen", invert: true },
-    { label: "Copy Qualität", before: 35, after: 87, unit: "/100" },
+    { label: "Conversion Rate", before: "1.2%", after: "4.8%", delta: "+300%", icon: "chart" },
+    { label: "Time to Launch", before: "8 Wochen", after: "2 Wochen", delta: "4x schneller", icon: "clock" },
+    { label: "Copy Qualität", before: "35/100", after: "87/100", delta: "+149%", icon: "star" },
   ];
 
   return (
-    <div className="w-full max-w-md mx-auto space-y-6">
-      {metrics.map((m, i) => {
-        const maxVal = m.invert ? m.before : m.after;
-        const beforePct = (m.before / maxVal) * 100;
-        const afterPct = (m.after / maxVal) * 100;
+    <div className="grid gap-4 sm:grid-cols-3 w-full">
+      {metrics.map((m, i) => (
+        <motion.div
+          key={m.label}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5, delay: i * 0.12 }}
+          className="rounded-xl border border-[var(--border-subtle)] bg-[var(--surface)] p-5 text-center"
+        >
+          <p className="font-body text-xs font-medium text-[var(--text-muted)] uppercase tracking-wider mb-4">
+            {m.label}
+          </p>
 
-        return (
-          <motion.div
-            key={m.label}
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.5, delay: i * 0.15 }}
-          >
-            <p className="font-body text-xs font-medium text-[var(--text-secondary)] mb-2">{m.label}</p>
-            <div className="space-y-1.5">
-              <div className="flex items-center gap-3">
-                <span className="text-[11px] font-body text-[var(--text-muted)] w-12">Vorher</span>
-                <div className="flex-1 h-5 bg-[var(--surface-elevated)] rounded-full overflow-hidden">
-                  <motion.div
-                    className="h-full rounded-full bg-zinc-500/30"
-                    initial={{ width: 0 }}
-                    whileInView={{ width: `${beforePct}%` }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8, delay: 0.3 + i * 0.15 }}
-                  />
-                </div>
-                <span className="text-xs font-bold font-body text-[var(--text-muted)] w-20 text-right">
-                  {m.before}{m.unit}
-                </span>
-              </div>
-              <div className="flex items-center gap-3">
-                <span className="text-[11px] font-body text-emerald-500 font-medium w-12">Nachher</span>
-                <div className="flex-1 h-5 bg-[var(--surface-elevated)] rounded-full overflow-hidden">
-                  <motion.div
-                    className="h-full rounded-full bg-emerald-500"
-                    initial={{ width: 0 }}
-                    whileInView={{ width: `${m.invert ? (1 - m.after / maxVal) * 100 : afterPct}%` }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8, delay: 0.5 + i * 0.15 }}
-                  />
-                </div>
-                <span className="text-xs font-bold font-body text-emerald-500 w-20 text-right">
-                  {m.after}{m.unit}
-                </span>
-              </div>
-            </div>
-          </motion.div>
-        );
-      })}
+          {/* Before → After */}
+          <div className="flex items-center justify-center gap-2 mb-3">
+            <span className="font-heading text-lg text-[var(--text-muted)] line-through decoration-1">
+              {m.before}
+            </span>
+            <svg className="w-4 h-4 text-[var(--text-muted)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+            <span className="font-heading text-2xl font-bold text-[var(--text-primary)]">
+              {m.after}
+            </span>
+          </div>
+
+          {/* Delta badge */}
+          <span className="inline-block font-body text-xs font-semibold text-emerald-500 dark:text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 rounded-full px-3 py-1">
+            {m.delta}
+          </span>
+        </motion.div>
+      ))}
     </div>
   );
 }

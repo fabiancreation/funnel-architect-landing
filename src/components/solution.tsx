@@ -59,7 +59,7 @@ export function Solution() {
                 <div className="rounded-lg bg-indigo-500/5 border border-indigo-500/10 p-4">
                   <p className="font-code text-sm text-[var(--text-primary)]">
                     Awareness Level 3 + Value Equation + Problem-Solution Lead + deine
-                    spezifischen False Beliefs
+                    spezifischen False Beliefs + Prompt
                   </p>
                 </div>
                 <div className="flex justify-center">
@@ -79,10 +79,10 @@ export function Solution() {
 
         {/* Before/After metrics */}
         <FadeIn delay={0.3} className="mt-16">
-          <div className="max-w-4xl mx-auto rounded-2xl border border-[var(--border-subtle)] bg-[var(--card-bg)] p-8">
-            <h3 className="font-heading text-lg font-bold text-[var(--text-primary)] text-center mb-8">
-              Der Unterschied mit strategischem Unterbau
-            </h3>
+          <h3 className="font-heading text-lg font-bold text-[var(--text-primary)] text-center mb-8">
+            Der Unterschied mit strategischem Unterbau
+          </h3>
+          <div className="max-w-4xl mx-auto">
             <BeforeAfterBars />
           </div>
         </FadeIn>

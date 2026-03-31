@@ -2,6 +2,7 @@ import { Navbar } from "@/components/navbar";
 import { Hero } from "@/components/hero";
 import { Problem } from "@/components/problem";
 import { Solution } from "@/components/solution";
+import { Differentiators } from "@/components/differentiators";
 import { Features } from "@/components/features";
 import { HowItWorks } from "@/components/how-it-works";
 import { SocialProof } from "@/components/social-proof";
@@ -18,6 +19,7 @@ export default function Home() {
         <Hero />
         <Problem />
         <Solution />
+        <Differentiators />
         <Features />
         <HowItWorks />
         <SocialProof />

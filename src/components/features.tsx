@@ -25,7 +25,7 @@ const pillars = [
   },
   {
     icon: PenTool,
-    badge: "$39/mo",
+    badge: "29\u20AC/mo",
     badgeClass: "text-[var(--text-muted)] border-[var(--border-default)]",
     title: "Copy Engine",
     subtitle: "Texte, die auf Strategie basieren",
@@ -41,7 +41,7 @@ const pillars = [
   },
   {
     icon: Rocket,
-    badge: "$149/mo",
+    badge: "99\u20AC/mo",
     badgeClass: "text-[var(--text-muted)] border-[var(--border-default)]",
     title: "Campaign Planner",
     subtitle: "Vom Plan zum Launch",
