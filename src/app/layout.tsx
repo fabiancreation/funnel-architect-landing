@@ -43,7 +43,7 @@ export default function RootLayout({
   return (
     <html
       lang="de"
-      className={`${satoshi.variable} ${inter.variable} ${jetbrainsMono.variable} dark antialiased`}
+      className={`${satoshi.variable} ${inter.variable} ${jetbrainsMono.variable} light antialiased`}
       suppressHydrationWarning
     >
       <body className="min-h-screen bg-background text-foreground font-body selection:bg-indigo-500/30">
