@@ -26,7 +26,7 @@ export function Solution() {
         <div className="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto">
           {/* Generic */}
           <FadeIn delay={0.1}>
-            <div className="rounded-2xl border border-[var(--border-subtle)] bg-[var(--card-bg)] p-8 h-full">
+            <div className="rounded-2xl border border-[var(--border-subtle)] bg-[var(--card-bg)] p-8 h-full card-hover">
               <div className="inline-block rounded-full bg-[var(--badge-muted-bg)] px-3 py-1 text-xs font-medium font-body text-[var(--badge-muted-text)] mb-6">
                 Generischer Prompt
               </div>
@@ -51,7 +51,7 @@ export function Solution() {
 
           {/* Framework-based */}
           <FadeIn delay={0.2}>
-            <div className="rounded-2xl border border-indigo-500/30 bg-[var(--card-bg)] p-8 h-full glow-indigo-sm">
+            <div className="rounded-2xl border border-indigo-500/30 bg-[var(--card-bg)] p-8 h-full glow-indigo-sm card-hover">
               <div className="inline-block gradient-text rounded-full bg-indigo-500/10 px-3 py-1 text-xs font-semibold font-body mb-6">
                 Framework + Kontext
               </div>

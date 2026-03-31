@@ -387,7 +387,7 @@ export function BeforeAfterBars() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.5, delay: i * 0.12 }}
-          className="rounded-xl border border-[var(--border-subtle)] bg-[var(--surface)] p-5 text-center"
+          className="rounded-xl border border-[var(--border-subtle)] bg-[var(--surface)] p-5 text-center card-hover"
         >
           <p className="font-body text-xs font-medium text-[var(--text-muted)] uppercase tracking-wider mb-4">
             {m.label}

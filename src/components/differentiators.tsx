@@ -32,7 +32,7 @@ export function Differentiators() {
         <div className="grid gap-6 md:grid-cols-2">
           {/* Left: Best AI Models */}
           <FadeIn delay={0.1}>
-            <div className="rounded-2xl border border-[var(--border-subtle)] bg-[var(--card-bg)] p-8 h-full">
+            <div className="rounded-2xl border border-[var(--border-subtle)] bg-[var(--card-bg)] p-8 h-full card-hover">
               <div className="rounded-xl bg-[var(--surface-elevated)] p-3 inline-block mb-6">
                 <Brain className="w-6 h-6 text-indigo-500 dark:text-indigo-400" />
               </div>
@@ -101,7 +101,7 @@ export function Differentiators() {
 
           {/* Right: Context never lost */}
           <FadeIn delay={0.2}>
-            <div className="rounded-2xl border border-[var(--border-subtle)] bg-[var(--card-bg)] p-8 h-full">
+            <div className="rounded-2xl border border-[var(--border-subtle)] bg-[var(--card-bg)] p-8 h-full card-hover">
               <div className="rounded-xl bg-[var(--surface-elevated)] p-3 inline-block mb-6">
                 <DatabaseZap className="w-6 h-6 text-indigo-500 dark:text-indigo-400" />
               </div>

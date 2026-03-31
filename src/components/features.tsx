@@ -74,7 +74,7 @@ export function Features() {
         <StaggerContainer className="grid gap-6 md:grid-cols-2">
           {pillars.map((pillar) => (
             <StaggerItem key={pillar.title} className={pillar.span}>
-              <div className="group relative rounded-2xl border border-[var(--border-subtle)] bg-[var(--card-bg)] p-8 h-full transition-all duration-200 hover:border-[var(--border-default)]">
+              <div className="group relative rounded-2xl border border-[var(--border-subtle)] bg-[var(--card-bg)] p-8 h-full card-hover">
                 <div className="flex items-start justify-between mb-6">
                   <div className="rounded-xl bg-[var(--surface-elevated)] p-3">
                     <pillar.icon className="w-6 h-6 text-indigo-500 dark:text-indigo-400" />
@@ -140,7 +140,7 @@ export function Features() {
         {/* Visual graphs row -- same grid as feature cards */}
         <div className="grid gap-6 md:grid-cols-2 mt-6">
           <FadeIn delay={0.2}>
-            <div className="rounded-2xl border border-[var(--border-subtle)] bg-[var(--card-bg)] p-8 h-full flex flex-col items-center justify-center">
+            <div className="rounded-2xl border border-[var(--border-subtle)] bg-[var(--card-bg)] p-8 h-full flex flex-col items-center justify-center card-hover">
               <h4 className="font-heading text-xs font-semibold text-[var(--text-muted)] uppercase tracking-widest text-center mb-8">
                 Framework-Abdeckung
               </h4>
@@ -148,7 +148,7 @@ export function Features() {
             </div>
           </FadeIn>
           <FadeIn delay={0.3}>
-            <div className="rounded-2xl border border-[var(--border-subtle)] bg-[var(--card-bg)] p-8 h-full flex flex-col justify-center">
+            <div className="rounded-2xl border border-[var(--border-subtle)] bg-[var(--card-bg)] p-8 h-full flex flex-col justify-center card-hover">
               <h4 className="font-heading text-xs font-semibold text-[var(--text-muted)] uppercase tracking-widest text-center mb-8">
                 Typischer Funnel-Durchlauf
               </h4>

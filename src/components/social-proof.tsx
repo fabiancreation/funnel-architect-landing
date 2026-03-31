@@ -95,7 +95,7 @@ export function SocialProof() {
         <StaggerContainer className="grid gap-6 md:grid-cols-3 mb-16">
           {testimonials.map((t) => (
             <StaggerItem key={t.name}>
-              <div className="rounded-2xl border border-[var(--border-subtle)] bg-[var(--card-bg)] p-8 h-full flex flex-col">
+              <div className="rounded-2xl border border-[var(--border-subtle)] bg-[var(--card-bg)] p-8 h-full flex flex-col card-hover">
                 <div className="flex gap-1 mb-5">
                   {[...Array(5)].map((_, i) => (
                     <Star
@@ -140,7 +140,7 @@ export function SocialProof() {
         </FadeIn>
 
         <FadeIn delay={0.2}>
-          <div className="rounded-2xl border border-[var(--border-subtle)] bg-[var(--card-bg)] p-8">
+          <div className="rounded-2xl border border-[var(--border-subtle)] bg-[var(--card-bg)] p-8 card-hover">
             <h4 className="font-heading text-xs font-semibold text-[var(--text-muted)] uppercase tracking-widest text-center mb-6">
               Wachstum nach Funnel-Launch
             </h4>

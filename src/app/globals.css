@@ -220,6 +220,19 @@
   opacity: 0.015;
 }
 
+/* Card hover */
+.card-hover {
+  transition: transform 0.2s ease-out, border-color 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+.card-hover:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-default);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+.light .card-hover:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
 /* Gradient text */
 .gradient-text {
   background: linear-gradient(135deg, #6366F1, #8B5CF6, #A78BFA);

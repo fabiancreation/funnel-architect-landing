@@ -37,7 +37,7 @@ export function Problem() {
         <StaggerContainer className="grid gap-6 md:grid-cols-3">
           {problems.map((problem) => (
             <StaggerItem key={problem.title}>
-              <div className="group relative rounded-2xl border border-[var(--border-subtle)] bg-[var(--card-bg)] p-8 h-full transition-all duration-200 hover:border-[var(--border-default)] cursor-default">
+              <div className="group relative rounded-2xl border border-[var(--border-subtle)] bg-[var(--card-bg)] p-8 h-full card-hover cursor-default">
                 <problem.icon className="w-6 h-6 text-[var(--text-muted)] mb-5" />
                 <h3 className="font-heading text-lg font-semibold text-[var(--text-primary)] mb-3 leading-snug">
                   {problem.title}
