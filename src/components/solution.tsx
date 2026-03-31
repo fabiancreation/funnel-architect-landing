@@ -58,8 +58,8 @@ export function Solution() {
               <div className="space-y-4">
                 <div className="rounded-lg bg-indigo-500/5 border border-indigo-500/10 p-4">
                   <p className="font-code text-sm text-[var(--text-primary)]">
-                    Awareness Level 3 + Value Equation + Problem-Solution Lead + deine
-                    spezifischen False Beliefs + Prompt
+                    Awareness Level 3 + Value Equation + Problem-Solution Lead +
+                    spezifische False Beliefs + Prompt
                   </p>
                 </div>
                 <div className="flex justify-center">
